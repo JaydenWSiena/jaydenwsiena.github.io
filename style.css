@@ -1,0 +1,11 @@
+body {
+    background: linear-gradient(135deg, #2222BB,#9200db);
+    background-size: 150% 150%;
+    animation: backgroundTween 6s ease-in-out infinite;
+}
+
+@keyframes backgroundTween {
+    0% { background-position: 0% 0% }
+    50% { background-position: 100% 100% }
+    100% { background-position: 0% 0% }
+}
