@@ -22,19 +22,29 @@ section {
 }
 
 .profile {
-    text-align: center;
+    display:flex;
     color: white;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Poppins', sans-serif;
     text-shadow: 0 0 20px white;
 }
 
+.text-content {
+    padding: 40px;
+    display:flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
 .text-content * {
-    transition: transform 0.2s ease-in-out;
-    margin-bottom: 2px;
+    transition: transform 0.5s ease-in-out,text-shadow 0.2s ease-in-out;
+    margin: 0;
 }
 
 .text-content *:hover {
     transform: scale(1.1);
+    text-shadow: 0 0 10px white;
+
+    animation: beating 2s ease-in-out infinite 1s;
 }
 
 .profile img {
@@ -43,4 +53,19 @@ section {
     border-radius: 50%;
     border: 5px solid white;
     box-shadow: 0 0 20px white;
+
+    transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+}
+
+.profile img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 40px white;
+
+    animation: beating 2s ease-in-out infinite 1s;
+}
+
+@keyframes beating {
+    0% { transform: scale(1.1) }
+    50% { transform: scale(1.05) }
+    100% { transform: scale(1.1) }
 }
