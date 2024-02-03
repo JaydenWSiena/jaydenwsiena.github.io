@@ -1,4 +1,10 @@
-body { margin: 0 0; }
+body { 
+    overflow: hidden;
+    margin: 0 0;
+    background-image: linear-gradient(135deg, #2222BB,#9200db);
+    background-size: 150% 150%;
+    animation: backgroundTween 3s ease-in-out infinite;
+}
 
 section {
     width: 100%;
@@ -7,9 +13,6 @@ section {
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    background: linear-gradient(135deg, #2222BB,#9200db);
-    background-size: 150% 150%;
-    animation: backgroundTween 3s ease-in-out infinite;
 }
 
 @keyframes backgroundTween {
