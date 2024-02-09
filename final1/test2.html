@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar Fun</title>
+    <style>
+
+        nav {
+            background-color: #333;
+            color: white;
+            padding: 0 10px;
+
+            display:flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        #navLogo {
+            padding: 10px 20px;
+            font-size: 24px;
+        }
+
+        nav ul {
+            display:flex;
+            list-style-type: none;
+
+            justify-content: space-between;
+
+            height: 100%;
+        }
+
+        nav li {
+            display: inline-block;
+            height: 100%;
+
+        }
+
+        nav a {
+            display: inline-block;
+            padding: 10px;
+
+            text-decoration: none;
+            color: white;
+
+            height: 100%;
+        }
+
+        nav a:hover {
+            background-color: #aaa;
+        }
+
+        @media (max-width: 600px) {
+            nav {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            #navLogo {
+                align-self: center;
+            }
+            nav ul {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            nav li {
+
+            }
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div id="navLogo">
+                Logo
+            </div>
+            <ul>
+                <li><a href="https://example.com/">Home</a></li>
+                <li><a href="https://example.com/">About</a></li>
+                <li><a href="https://example.com/">Services</a></li>
+                <li><a href="https://example.com/">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+</body>
+
+</html>

@@ -4,6 +4,9 @@ body {
     background-image: linear-gradient(135deg, #2222BB,#9200db);
     background-size: 150% 150%;
     animation: backgroundTween 3s ease-in-out infinite;
+    
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Poppins', sans-serif;
+    color:white;
 }
 
 section {
@@ -24,8 +27,6 @@ section {
 
 .profile {
     display:flex;
-    color: white;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Poppins', sans-serif;
     text-shadow: 0 0 20px white;
 }
 
@@ -96,6 +97,29 @@ section {
 }
 
 .socials *:hover {
+    transform: scale(1.1);
+    text-shadow: 0 0 40px white;
+}
+
+.sites {
+    margin-top: 12px;
+    display:flex;
+    justify-content: space-around;
+    transition: none;
+}
+
+.sites:hover {
+    transform: none;
+    animation: none;
+}
+
+.sites i {
+    text-shadow: 0 0 20px white;
+    transition: transform 0.5s ease-in-out, text-shadow 0.5s ease-in-out;
+}
+
+
+.sites i:hover {
     transform: scale(1.1);
     text-shadow: 0 0 40px white;
 }
