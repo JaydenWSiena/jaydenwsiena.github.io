@@ -1,5 +1,5 @@
 body { 
-    overflow: hidden;
+    overflow: scroll-y;
     margin: 0 0;
     background-image: linear-gradient(135deg, #2222BB,#9200db);
     background-size: 150% 150%;
@@ -11,12 +11,11 @@ body {
 
 section {
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
-    flex-direction:column;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    flex-wrap: wrap;
 }
 
 @keyframes backgroundTween {
@@ -26,6 +25,7 @@ section {
 }
 
 .profile {
+    margin-top: 20px;
     display:flex;
     text-shadow: 0 0 20px white;
 }
@@ -104,6 +104,7 @@ section {
 .sites {
     margin-top: 12px;
     display:flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     transition: none;
 
@@ -121,21 +122,31 @@ section {
     padding: 10px 10px;
 }
 
-.sites i {
+.sites i, h1 {
     margin: 16px 5px;
     text-shadow: 0 0 20px white;
     transition: transform 0.5s ease-in-out, text-shadow 0.5s ease-in-out;
 }
 
 
-.sites i:hover {
+.sites i:hover, .sites h1:hover {
     transform: scale(1.1);
     text-shadow: 0 0 40px white;
+}
+
+iframe {
+    background-color:white;
+    pointer-events: none;
+
+    border: 2px solid white;
+    box-shadow: 0 0 20px white;
 }
 
 
 @media (max-width: 600px) {
     .profile {
+        margin-top: 75px;
+
         flex-direction: column;
         align-items: center;
         text-align: center;
