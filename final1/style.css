@@ -1,43 +1,162 @@
-body { 
-    display:flex;
-    flex-direction: column;
-
-    min-height: 100vh;
-    margin: 0;
+html {
+  overflow: hidden;
+  height: 100%;
+  background-color: black;
+  background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(56, 9, 121, 0.840795693277311) 100%
+    ),
+    url(./noise.svg);
 }
 
-main {
-    display:flex;
-    flex-direction: column;
+body {
+  margin: 0 0;
+  height: 100%;
+  overflow: auto;
+
+  width: 100%;
+  min-height: 100vh;
+
+  color: white;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
-article {
-    background: lightgray;
-    height: 20vh;
-    flex-grow: 1;
-    padding: 1em;
+nav {
+  position: absolute;
+  background: transparent;
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 5;
 }
 
-nav, aside {
-    background-color: beige;
-    padding: 1em;
-
+#navlogo {
+  margin: 16px 32px;
+  display:flex;
+  align-items:center;
+  justify-content: center;
 }
 
-header, footer {
-    background-color: yellowgreen;
-    height: 10vh;
-    padding: 1em;
+#navlogo h1 {
+  margin: 16px;
+  font-variant: small-caps;
 }
 
-@media screen and (min-width: 576px) {
-    main {
-        flex-direction: row;
-    }
+#navpic {
+  width: 50px;
+  height: 50px;
 
-    nav, aside {
-        flex-grow: 0;
-        flex-shrink: 0;
-        flex-basis: 20vw;
-    }
+  border: 2px solid white;
+  padding: 4px;
+
+  border-radius: 50%;
+}
+
+#navlist {
+  display: flex;
+}
+
+#navlist li {
+  list-style-type: none;
+  padding: 8px 8px;
+  margin: 0 8px;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+#navlist li:hover {
+  color: black;
+  background-color: white;
+}
+
+.landing {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  height: 100vh;
+}
+
+.bento {
+  display: grid;
+
+  grid-template-areas:
+    "one one two two three four"
+    "five six two two seven seven";
+
+  width: 90%;
+  min-height: 400px;
+}
+
+.bento div {
+  margin: 16px 16px;
+  border-radius: 24px;
+  border: 1px solid #bbbbbb44;
+  box-shadow: 0 0 20px #bbbbbb44;
+
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 32px;
+  font-weight: bold;
+
+  backdrop-filter: blur(2px) brightness(110%) contrast(80%);
+}
+
+#bento1 {
+  grid-area: one;
+}
+
+#bento2 {
+  grid-area: two;
+}
+
+#bento3 {
+  grid-area: three;
+}
+
+#bento4 {
+  grid-area: four;
+}
+
+#bento5 {
+  grid-area: five;
+}
+
+#bento6 {
+  grid-area: six;
+}
+
+#bento7 {
+  grid-area: seven;
+}
+
+#bento8 {
+  grid-area: eight;
+}
+
+@media (max-width: 1050px) {
+  .bento {
+    grid-template-areas: 
+      "two two"
+      "two two"
+      "one one"
+      "five six"
+      "three four"
+      "seven seven";
+    height: 100%;
+  }
+  .bento div {
+    min-height: 200px;
+  }
+  #bento2 {
+    width: 90%;
+    height: 50vh;
+  }
 }
