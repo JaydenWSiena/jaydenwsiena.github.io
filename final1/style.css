@@ -96,46 +96,72 @@ nav {
   margin: 16px 16px;
   border-radius: 24px;
   padding: 24px 24px;
-  border: 1px solid #bbbbbb44;
+  border: 2px solid #bbbbbb44;
   box-shadow: 0 0 20px #bbbbbb44;
+
+  color: white;
+  text-shadow: 0 0 12px black;
 
 
   display: flex;
-  justify-content: flex-start;
-  align-items: flex-end;
+  flex-direction: column-reverse;
+  justify-content: space-between;
+  align-items: flex-start;
 
-  font-size: 32px;
+  font-size: 28px;
   font-weight: bold;
 
-  backdrop-filter: blur(2px) brightness(110%) contrast(80%);
+  backdrop-filter: blur(3px) brightness(110%) contrast(80%);
+  background-size: cover;
+  background-position: center center;
+}
+
+.bento div i {
+  width: 64px;
+  margin-bottom: 16px;
 }
 
 #bento1 {
   grid-area: one;
+
+  background-image: url('assets/compsci.png');
 }
 
 #bento2 {
   grid-area: two;
+
+  background-image: url('assets/funny-selfie.jpg');
 }
 
 #bento3 {
   grid-area: three;
+
+  background-image: url('assets/family.jpeg');
 }
 
 #bento4 {
   grid-area: four;
+
+  background-image: url('assets/friends-stella.jpg');
+  background-position-y: top;
 }
 
 #bento5 {
   grid-area: five;
+
+  background-image: url('assets/toby.jpg');
 }
 
 #bento6 {
   grid-area: six;
+
+  background-image: url('assets/sadie.jpg');
 }
 
 #bento7 {
   grid-area: seven;
+
+  background-image: url('assets/theatre.jpg');
 }
 
 #bento8 {
@@ -150,9 +176,9 @@ nav {
       "two two"
       "two two"
       "one one"
-      "five six"
-      "three four"
-      "seven seven";
+      "seven four"
+      "three three"
+      "five six";
     height: 100%;
   }
   .bento div {
