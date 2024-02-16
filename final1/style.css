@@ -2,12 +2,17 @@ html {
   overflow: hidden;
   height: 100%;
   background-color: black;
+
+  background-repeat: norepeat;
+  background-size: cover;
   background: linear-gradient(
       180deg,
-      rgba(0, 0, 0, 1) 0%,
+      rgba(0, 0, 0, 0.95) 0%,
       rgba(56, 9, 121, 0.840795693277311) 100%
-    ),
+    ),url('./bg.svg'),
     url(./noise.svg);
+  background-repeat: norepeat;
+  background-size: cover;
 }
 
 body {
@@ -27,6 +32,12 @@ nav {
   position: absolute;
   background: transparent;
   width: 100%;
+
+  background-image: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(0,0,0, 0) 100%
+    );
 
   display: flex;
   justify-content: space-between;
@@ -73,16 +84,30 @@ nav {
   background-color: white;
 }
 
+section {
+  padding: 64px 10%;
+  border-top: 2px solid #bbbbbb44;
+  border-bottom: 2px solid #bbbbbb44;
+  box-shadow: 0 0 20px #bbbbbb44;
+  backdrop-filter: blur(12px) brightness(110%) contrast(80%);
+}
+
 .landing {
+  margin: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   align-content: center;
-  height: 100vh;
+  min-height: 100vh;
+
+  object-fit: contain;
 }
 
 .bento {
   display: grid;
+  grid-auto-flow: dense;
+
+  grid-gap: 32px;
 
   grid-template-areas:
     "one one two two three four"
@@ -93,7 +118,6 @@ nav {
 }
 
 .bento div {
-  margin: 16px 16px;
   border-radius: 24px;
   padding: 24px 24px;
   border: 2px solid #bbbbbb44;
@@ -102,11 +126,13 @@ nav {
   color: white;
   text-shadow: 0 0 12px black;
 
-
   display: flex;
   flex-direction: column-reverse;
   justify-content: space-between;
   align-items: flex-start;
+
+  position: relative;
+  transform: scale(0%);
 
   font-size: 28px;
   font-weight: bold;
@@ -125,18 +151,55 @@ nav {
   grid-area: one;
 
   background-image: url('assets/compsci.png');
+
+  animation: leftIn 0.5s ease-out 0.75s forwards;
 }
 
 #bento2 {
   grid-area: two;
 
   background-image: url('assets/funny-selfie.jpg');
+
+  animation: centerIn 0.5s ease-out 0.5s forwards;
+}
+
+@keyframes centerIn {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes leftIn {
+  0% {
+    transform: scale(0) rotateX(45deg);
+    left: -100%;
+  }
+  100% {
+    transform: scale(1);
+    left: 0;
+  }
+}
+
+@keyframes rightIn {
+  0% {
+    transform: scale(0) rotateX(-45deg);
+    right: -100%;
+  }
+  100% {
+    transform: scale(1);
+    right: 0;
+  }
 }
 
 #bento3 {
   grid-area: three;
 
   background-image: url('assets/family.jpeg');
+
+  animation: rightIn 0.5s ease-out 1.5s forwards;
 }
 
 #bento4 {
@@ -144,24 +207,32 @@ nav {
 
   background-image: url('assets/friends-stella.jpg');
   background-position-y: top;
+
+  animation: rightIn 0.5s ease-out 1.75s forwards;
 }
 
 #bento5 {
   grid-area: five;
 
   background-image: url('assets/toby.jpg');
+
+  animation: leftIn 0.5s ease-out 1.25s forwards;
 }
 
 #bento6 {
   grid-area: six;
 
   background-image: url('assets/sadie.jpg');
+
+  animation: leftIn 0.5s ease-out 1s forwards;
 }
 
 #bento7 {
   grid-area: seven;
 
   background-image: url('assets/theatre.jpg');
+
+  animation: rightIn 0.5s ease-out 2s forwards;
 }
 
 #bento8 {
@@ -170,15 +241,15 @@ nav {
 
 @media (max-width: 1050px) {
   .bento {
-    margin-top: 64px;
+    margin: 64px 0;
 
     grid-template-areas: 
       "two two"
       "two two"
       "one one"
-      "seven four"
+      "five six"
       "three three"
-      "five six";
+      "four seven";
     height: 100%;
   }
   .bento div {
