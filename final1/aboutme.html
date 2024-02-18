@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8" />
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="common-style.css" />
   <link rel="stylesheet" href="aboutStyle.css">
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="theme-color" content="#000000" />
@@ -13,27 +13,28 @@
 </head>
 
 <body>
-  <nav>
+  <header>
     <div id="navlogo">
       <img id="navpic" src="https://avatars.githubusercontent.com/u/144077494?v=4" alt="Profile Picture" />
       <h1>Jayden Wojcik</h1>
     </div>
-    <ul id="navlist">
-      <li>HOME</li>
-      <li>ABOUT ME</li>
-      <li>BLOG</li>
-      <li>GALLERY</li>
-    </ul>
-  </nav>
+  </header>
 
-  <main class="landing">
-    <div class="aboutmeContainer">
-      <section class="aboutmeText">
-
-        <img id="calendarpic" src="assets/calendar.PNG" alt="A very busy calendar">
+  <main>
+    <nav>
+      <ul id="navlist">
+        <li onclick="location.href='index.html'">HOME</li>
+        <li class="active-page" onclick="location.href='aboutme.html'">ABOUT ME</li>
+        <li onclick="location.href='blog.html'">BLOG</li>
+        <li onclick="location.href='gallery.html'">GALLERY</li>
+      </ul>
+    </nav>
+    <article>
+      <section class="aboutmeContainer">
+        <img id="calendarpic" src="assets/about/calendar.PNG" alt="A very busy calendar" class="imgRight">
         <h1>About Me</h1>
         <p>
-          Jayden Wojcik is a dependable guy with quick wits. He has above average
+          Jayden Wojcik <small>(he/him)</small> is a dependable guy with quick wits. He has above average
           experience and comprehension of programming for his age and plans to
           graduate early from <em>Siena College</em>.
         </p>
@@ -43,14 +44,179 @@
           <li>Siena College: Admissions</li>
           <li>Siena College: Higher Education Opportunity Program</li>
         </ul>
-        <p>This calls for a very busy schedule!</p>
-      
+        <p>Since he is on track to graduate early, he is ahead in his major by a whole year. As a <strong>first-year
+            student</strong> he has already completed the following classes:</strong></p>
+        <ul>
+          <li>Introduction to Computer Science</li>
+          <li>Introduction to Software Development</li>
+          <li>Data Structures</li>
+        </ul>
       </section>
-      
-      <img id="calendarpic" src="assets/calendar.PNG" alt="A very busy calendar">
-
-    </div>
+      <section>
+        <img src="assets/about/early-life.webp" alt="Jayden standing on a college set of School of Rock" class="imgRight">
+        <h2>Early Life</h2>
+        <p>From the earliest stages of their formative years, Jayden's journey toward self-discovery and passion was
+          evident, showcasing a remarkable blend of innate curiosity and budding talent. While the seeds of academic
+          excellence were sown in the fertile soil of their young mind, it was during the pivotal years of middle school
+          that Jayden's true passions began to blossom into full bloom.
+        </p>
+        <p>
+          At the tender age of 7, Jayden stumbled upon a gateway to a world of boundless possibility and expression:
+          music.
+          This serendipitous encounter ignited a flame within their soul, revealing the profound and transformative
+          power of
+          melody and rhythm. By the age of 10, Jayden's voice emerged as a potent instrument of emotion and resonance,
+          heralding the onset of a lifelong love affair with the art of vocal expression.
+        </p>
+        <p>
+          Stepping into the hallowed halls of the School of Rock Performance Program at 11, Jayden found themselves
+          immersed
+          in an environment teeming with creative energy and musical exploration. Here, amidst the harmonious cadence of
+          collaborative endeavors, Jayden honed their musical talents, refining their skills and forging lasting
+          connections
+          with fellow musicians.
+        </p>
+        <p>
+          The dawn of Jayden's twelfth year marked a significant milestone in their journey: the debut of their
+          theatrical
+          career. With a heart brimming with passion and a spirit eager for adventure, Jayden took to the stage with
+          aplomb,
+          embracing the spotlight and captivating audiences with their magnetic presence. Despite the demands of
+          academic
+          rigor, Jayden remained steadfast in their commitment to artistic expression, seamlessly balancing their
+          pursuits
+          on and off the stage.
+        </p>
+        <p>
+          Throughout the tumultuous currents of middle school, Jayden's unwavering dedication to both academic
+          excellence
+          and creative endeavors served as a beacon of inspiration to peers and mentors alike. Their ability to
+          seamlessly
+          integrate their passions into the fabric of their daily life spoke volumes about their resilience,
+          determination,
+          and unwavering commitment to personal growth and fulfillment.
+        </p>
+        <p>
+          As Jayden's journey continued to unfold, each chapter served as a testament to the transformative power of
+          passion, perseverance, and the unwavering belief in the boundless potential of the human spirit. And as they
+          embarked on the next chapter of their odyssey, Jayden carried with them the invaluable lessons learned and the
+          indelible memories forged amidst the harmonious interplay of melody, rhythm, and the pursuit of knowledge.
+        </p>
+      </section>
+      <section>
+        <img src="assets/about/high-school.JPG" alt="Jayden standing on a high school set of Mamma Mia" class="imgLeft">
+        <h2>High School Life</h2>
+        <p>In high school, Jayden's multifaceted talents blossomed, showcasing a remarkable blend of musical prowess and
+          academic excellence that defined their scholastic journey. Despite their unwavering dedication to academic
+          pursuits, Jayden discovered a sanctuary in the captivating world of musical theater, where their passion for
+          performance thrived. Immersed in the vibrant community of School of Rock's Houseband program, Jayden honed
+          their
+          musical skills, contributing their unique voice to exhilarating performances that left audiences spellbound.
+          With
+          each note and every chord, Jayden's talent illuminated the stage, earning them acclaim and admiration from
+          peers
+          and mentors alike.
+        </p>
+        <p>
+          However, amidst the demanding rigors of academia, Jayden's path took an unexpected turn in 2021 with a pivotal
+          moment that would alter the course of their future. Enrolling in a Computer Programming class, Jayden
+          uncovered a
+          latent fascination with the intricate art of software development. As lines of code became their canvas and
+          algorithms their melody, Jayden embarked on a journey of discovery, delving into the boundless possibilities
+          of
+          technology with an insatiable curiosity.
+        </p>
+        <p>
+          Yet, even as their academic pursuits flourished, Jayden's passion for the stage remained undiminished.
+          Balancing
+          the demands of programming assignments with rehearsals and performances, Jayden found solace and inspiration
+          in
+          the expressive art of theater. From poignant portrayals in productions like "Les Miserables: School Edition"
+          to
+          exuberant performances in "Mamma Mia: School Edition," Jayden's versatility and dedication shone brightly,
+          leaving
+          an indelible mark on the stage and in the hearts of audiences.
+        </p>
+        <p>
+          As Jayden navigated the complexities of high school life, their journey became a testament to the
+          transformative
+          power of passion and perseverance. Through the harmonious fusion of music, academics, and theater, Jayden
+          discovered a profound sense of purpose and identity, laying the foundation for a future brimming with
+          possibility
+          and promise.
+        </p>
+        <p>
+          In the tapestry of Jayden's high school experience, each thread represents a unique chapter in their story—a
+          story
+          of talent, tenacity, and the timeless pursuit of excellence. And as they set their sights on the horizon of
+          tomorrow, Jayden carries with them the invaluable lessons learned and the enduring memories forged on the
+          stage
+          and beyond.</p>
+        </p>
+      </section>
+      <section>
+        <img src="assets/about/college-life.jpg"
+          alt="The ensemble cast ofa college production of Ibsen's An Enemy of the People" class="imgRight">
+        <h2>College Life</h2>
+        <p>Transitioning to the hallowed halls of academia, Jayden embarked on a journey of intellectual and artistic
+          exploration, eager to seize the myriad opportunities that awaited them. As they stepped into their role as a
+          Freshman in credit, Jayden found themselves at the nexus of possibility, poised to delve into the depths of
+          Computer Science while simultaneously nurturing their enduring passion for the theater arts.
+        </p>
+        <p>
+          With a voracious appetite for knowledge and a spirit of unyielding curiosity, Jayden immersed themselves in
+          the
+          intricate complexities of Computer Science, unraveling the enigmatic mysteries of algorithms and programming
+          languages. Each line of code became a brushstroke on the canvas of their imagination, as they reveled in the
+          boundless potential of technological innovation and creative expression.
+        </p>
+        <p>
+          Yet, amidst the labyrinthine corridors of binary logic and computational theory, Jayden's heart remained
+          steadfastly tethered to the stage. As they donned the mantle of "Master Vic" in MainStage's production of
+          Ibsen's
+          "An Enemy of the People," Jayden breathed life into the character with a depth of emotion and nuance that
+          captivated audiences and peers alike. Simultaneously, their role as Assistant Stage Manager in "A Maze"
+          afforded
+          them invaluable insights into the collaborative dynamics of theatrical production, as they navigated the
+          intricate
+          dance between creativity and logistics with poise and precision.
+        </p>
+        <p>
+          Looking ahead to the dawn of their second year as a Junior in credit, Jayden stands on the precipice of new
+          horizons, armed with a profound appreciation for the symbiotic relationship between the arts and sciences.
+          With
+          each step forward, they carry with them the lessons learned and the memories forged amidst the crucible of
+          collegiate theater, poised to embark on a new chapter of discovery and growth. As the curtain rises on the
+          next
+          act of their journey, Jayden embraces the boundless possibilities that lie ahead, eager to explore the
+          intersections of technology, creativity, and human expression with an insatiable thirst for knowledge and a
+          heart
+          full of dreams.
+        </p>
+        <p>Beyond the stage and the classroom, Jayden finds joy in exploring diverse interests, from gaming and
+          programming
+          on the ROBLOX platform to engaging with cultural and linguistic studies. With an insatiable curiosity and a
+          determination to make a meaningful impact, Jayden eagerly anticipates the chapters yet to unfold.</p>
+        </p>
+      </section>
+    </article>
+    <aside>
+      <ul id="sociallist">
+        <li><a href="mailto:jm12wojc@siena.edu" target="_blank">
+            <i class="fa-solid fa-envelope fa-lg"></i> E-MAIL</a></li>
+        <li><a href="https://www.github.com/JaydenWSiena/" target="_blank">
+            <i class="fa-brands fa-github fa-lg"></i> GITHUB
+          </a></li>
+        <li><a href="https://calendar.app.google/Kc4cyqjVviHCbESp7" target="_blank">
+            <i class="fa-solid fa-calendar fa-lg"></i> APPOINTMENTS
+          </a></li>
+      </ul>
+    </aside>
   </main>
+  <footer>© 2023 Jayden Wojcik. Icons provided by <a href="https://fontawesome.com/"
+    target="_blank">FontAwesome.com</a>. The above text was generated using <a href="https://chatgpt.com/"
+      target="_blank">ChatGPT</a>, a generative AI that replicates human language.
+  </footer>
 </body>
 
 </html>

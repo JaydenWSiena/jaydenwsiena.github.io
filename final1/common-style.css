@@ -9,8 +9,8 @@ html {
       180deg,
       rgba(0, 0, 0, 0.95) 0%,
       rgba(56, 9, 121, 0.840795693277311) 100%
-    ),url('./bg.svg'),
-    url(./noise.svg);
+    ),
+    url("assets/bg.svg"), url(assets/noise.svg);
   background-repeat: norepeat;
   background-size: cover;
 }
@@ -26,14 +26,67 @@ body {
   color: white;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-    
+
   scrollbar-gutter: stable;
+}
+
+body { 
+  display:flex;
+  flex-direction: column;
+
+  min-height: 100vh;
+  margin: 0;
+}
+
+main {
+  display:flex;
+  flex-direction: column;
+}
+
+article {
+  flex-grow: 1;
+  padding: 1em;
+}
+
+nav, aside {
+  width: auto;
+  padding: 1em;
+  background: transparent;
+
+  z-index: 2;
+  padding: 1em;
+
+}
+
+header, footer {
+  padding: 1em;
+
+  border: 2px solid #bbbbbb44;
+  box-shadow: 0 0 20px #bbbbbb44;
+
+  backdrop-filter: blur(3px) brightness(110%) contrast(80%);
+}
+
+@media screen and (min-width: 750px) {
+  main {
+      flex-direction: row;
+  }
+
+  nav, aside {
+
+      flex-grow: 0;
+      flex-shrink: 0;
+      flex-basis: 20vw;
+  }
+
+  #navlist#navlist li {
+    text-align: right;
+  }
 }
 
 ::-webkit-scrollbar {
   width: 8px;
   z-index: 5;
-
 }
 
 ::-webkit-scrollbar-track {
@@ -43,7 +96,7 @@ body {
   background-color: #00000066;
 }
 
-::-webkit-scrollbar-thumb  {
+::-webkit-scrollbar-thumb {
   background-color: #ffffff22;
   border-radius: 4px;
 }
@@ -52,27 +105,11 @@ body {
   background-color: #ffffffaa;
 }
 
-nav {
-  position: absolute;
-  background: transparent;
-  width: 100%;
-
-  background-image: linear-gradient(
-      180deg,
-      rgba(0, 0, 0, 1) 0%,
-      rgba(0,0,0, 0) 100%
-    );
-
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  z-index: 2;
-}
 
 #navlogo {
   margin: 16px 32px;
-  display:flex;
-  align-items:center;
+  display: flex;
+  align-items: center;
   justify-content: center;
 }
 
@@ -109,56 +146,63 @@ nav {
   }
 }
 
-#navlist {
-  display: flex;
-  margin-right: 16px;
+#navlist, #sociallist {
+  padding-inline-start: 0;
+  position: sticky;
+  top:32px;
 }
 
-#navlist li {
+#navlist li, #sociallist li {
+  text-align: left;
+}
+
+#navlist li, #sociallist li {
   list-style-type: none;
   padding: 8px 8px;
-  margin: 0 8px;
+  margin: 8px 0;
   border-radius: 8px;
   font-weight: 600;
+
+  background: none;
+  color: white;
+
+  transition: background-color 0.5s, color 0.5s;
 }
 
-#navlist li:hover {
+#navlist li.active-page {
+  color: #ffffff99;
+}
+
+#sociallist a, #sociallist i {
+  text-decoration: none;
+  color: inherit;
+}
+
+#navlist li:hover, #sociallist li:hover {
   color: black;
   background-color: white;
 }
 
-section {
+/* section {
   padding: 64px 10%;
   border-top: 2px solid #bbbbbb44;
   border-bottom: 2px solid #bbbbbb44;
   box-shadow: 0 0 20px #bbbbbb44;
   backdrop-filter: blur(12px) brightness(110%) contrast(80%);
-}
+} */
 
 .landing {
   margin: 0;
-  
-  
-  min-height: 100vh;
-  
-  object-fit: contain;
-}
-.about-landing {
   display: flex;
   justify-content: center;
   align-items: center;
-  align-content: center;
-  flex-wrap: wrap;
-  margin: 0 10%;
-  padding: 24px 32px;
-  border: 2px solid #bbbbbb44;
-  border-radius: 24px;
-  box-shadow: 0 0 20px #bbbbbb44;
-  backdrop-filter: blur(12px) brightness(110%) contrast(80%);
 
-  min-height: 50vh;
+  object-fit: contain;
+}
 
-  
+.scaled100.scaled100 {
+  animation: none;
+  transform: scale(1);
 }
 
 .bento {
@@ -168,18 +212,21 @@ section {
   grid-gap: 32px;
 
   grid-template-areas:
-    "one one two two three four"
-    "five six two two seven seven";
+    "two two three four"
+    "two two seven seven"
+    "one one five six";
 
-  width: 90%;
-  min-height: 400px;
+  width: 100%;
+  min-height: 600px;
 }
 
 .bento div {
-  border-radius: 24px;
   padding: 24px 24px;
+  border-radius: 24px;
   border: 2px solid #bbbbbb44;
   box-shadow: 0 0 20px #bbbbbb44;
+
+  backdrop-filter: blur(3px) brightness(110%) contrast(80%);
 
   color: white;
   text-shadow: 0 0 12px black;
@@ -195,9 +242,12 @@ section {
   font-size: 28px;
   font-weight: bold;
 
-  backdrop-filter: blur(3px) brightness(110%) contrast(80%);
-  background-size: cover;
-  background-position: center center;
+
+  object-fit: cover;
+
+  overflow: hidden;
+
+  transition: transform 0.5s;
 }
 
 .bento div i {
@@ -205,41 +255,46 @@ section {
   margin-bottom: 16px;
 }
 
+.bento.bento > div:hover {
+  transform: scale(1.05);
+}
+
+.bentoBack {
+  position: absolute;
+  z-index: -1;
+
+  /* Absolute centering of the img because it has to have text and stuff happening over top of it */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  min-height: 100%;
+  height: auto;
+  width: 100%;
+}
+
 #bento1 {
   grid-area: one;
-
-  background-image: url('assets/compsci.png');
-
-  animation: leftIn 0.5s ease-out 0.75s forwards;
+  animation: rightIn 0.5s ease-out 0.75s forwards;
 }
 
 #bento2 {
   grid-area: two;
 
-  background-image: url('assets/funny-selfie.jpg');
-
-  animation: centerIn 0.5s ease-out 0.5s forwards;
+  transform: scale(1);
+  animation: center 10s ease 0.5s infinite;
 }
 
-@keyframes centerIn {
-  0% {
-    transform: scale(0);
-  }
-  100% {
-    transform: scale(1);
-  }
+@keyframes center {
+  3% { transform: scale(1); }
+  4% { transform: rotate(-2deg) scale(1.01); }
+  5% { transform: rotate(2deg) scale(1.02); }
+  6% { transform: rotate(-2deg) scale(1.04); }
+  7% { transform: rotate(0deg) scale(1.05); }
+  10% { transform: scale(1.05); }
+  50% { transform: scale(1)}
 }
 
-@keyframes leftIn {
-  0% {
-    transform: scale(0) rotateX(45deg);
-    left: -100%;
-  }
-  100% {
-    transform: scale(1);
-    left: 0;
-  }
-}
 
 @keyframes rightIn {
   0% {
@@ -255,40 +310,47 @@ section {
 #bento3 {
   grid-area: three;
 
-  background-image: url('assets/family.jpeg');
-
   animation: rightIn 0.5s ease-out 1.5s forwards;
+}
+
+#bento3 .bentoBack {
+  min-width: 100%;
+  width: auto;
+  height: 100%;
 }
 
 #bento4 {
   grid-area: four;
 
-  background-image: url('assets/friends-stella.jpg');
-  background-position-y: top;
-
   animation: rightIn 0.5s ease-out 1.75s forwards;
+}
+
+#bento4 .bentoBack {
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
 }
 
 #bento5 {
   grid-area: five;
 
-  background-image: url('assets/toby.jpg');
+  animation: rightIn 0.5s ease-out 1.25s forwards;
+}
 
-  animation: leftIn 0.5s ease-out 1.25s forwards;
+#bento5 .bentoBack {
+  min-width: 100%;
+  width: auto;
+  height: 100%;
 }
 
 #bento6 {
   grid-area: six;
 
-  background-image: url('assets/sadie.jpg');
-
-  animation: leftIn 0.5s ease-out 1s forwards;
+  animation: rightIn 0.5s ease-out 1s forwards;
 }
 
 #bento7 {
   grid-area: seven;
-
-  background-image: url('assets/theatre.jpg');
 
   animation: rightIn 0.5s ease-out 2s forwards;
 }
@@ -297,30 +359,30 @@ section {
   grid-area: eight;
 }
 
-.about-landing  {
+.about-landing {
   display: flex;
   width: 100%;
 }
 .about-landing {
-  flex-shrink:1;
+  flex-shrink: 1;
 }
 
-#calendarpic {
-  float: right;
-  flex-grow:1;
-
-  border-radius: 24px;
-  border: 2px solid #bbbbbb44;
-  box-shadow: 0 0 20px #bbbbbb44;
-
-  max-height: 50vh;
+section {
+  padding: 32px 0;
+  border-bottom: 2px solid #bbbbbb44;
 }
 
-@media (max-width: 1050px) {
+footer {
+  margin: 24px 10%;
+}
+
+a {
+  color: #ffffff99;
+}
+
+@media (max-width: 1200px) {
   .bento {
-    margin: 64px 0;
-
-    grid-template-areas: 
+    grid-template-areas:
       "two two"
       "two two"
       "one one"
@@ -336,23 +398,20 @@ section {
     height: 50vh;
   }
 
-  nav {
-    position: relative;
+  #bento3 .bentoBack {
+    min-width: 100%;
+    width: 100%;
+    height: auto;
   }
 
-  #navlogo, nav, nav ul {
-    flex-direction: column;
-    align-items: flex-start
+  #bento5 .bentoBack {
+    min-width: 100%;
+    width: 100%;
+    height: auto;
   }
 
   #navlogo {
     align-self: center;
     align-items: center;
   }
-
-  #calendarpic {
-    width: 100%;
-  }
-
-  .about-landing
 }

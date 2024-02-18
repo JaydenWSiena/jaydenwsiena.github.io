@@ -1,0 +1,24 @@
+h3 {
+  font-size: smaller;
+  font-weight: 150;
+
+  margin-block-start: 4px;
+}
+
+h1 {
+  margin-block-end: 4px;
+}
+
+#btt {
+  text-decoration: underline;
+
+}
+
+#btt:active {
+  text-decoration: dotted;
+  color: #ffffff99;
+}
+
+#btt:hover {
+  cursor: pointer;
+}
