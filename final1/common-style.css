@@ -10,7 +10,7 @@ html {
       rgba(0, 0, 0, 0.95) 0%,
       rgba(56, 9, 121, 0.840795693277311) 100%
     ),
-    url("assets/bg.svg"), url(assets/noise.svg);
+    url('assets/noise.svg'), url("assets/bg.svg");
   background-repeat: norepeat;
   background-size: cover;
 }
@@ -60,7 +60,9 @@ nav, aside {
 
 header, footer {
   padding: 1em;
+}
 
+footer {
   border: 2px solid #bbbbbb44;
   box-shadow: 0 0 20px #bbbbbb44;
 
