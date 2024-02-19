@@ -4,7 +4,64 @@
 <head>
   <meta charset="UTF-8">
   <link rel="stylesheet" href="common_style.css">
-  <link rel="stylesheet" href="aboutStyle.css">
+  <style>
+    .aboutmeContainer {
+      padding: 24px 24px;
+      border-radius: 24px;
+      border: 2px solid #bbbbbb44;
+      box-shadow: 0 0 20px #bbbbbb44;
+
+
+      backdrop-filter: blur(3px) brightness(110%) contrast(80%);
+    }
+
+    h3 {
+      margin-block-start: 0;
+    }
+
+    .imgRight {
+      float: right;
+      flex-grow: 1;
+
+      border-radius: 24px;
+      border: 2px solid #bbbbbb44;
+      box-shadow: 0 0 20px #bbbbbb44;
+
+      max-height: 50vh;
+      max-width: 60%;
+
+      margin-left: 24px;
+      margin-bottom: 24px;
+    }
+
+    .imgLeft {
+      float: left;
+      flex-grow: 1;
+
+      border-radius: 24px;
+      border: 2px solid #bbbbbb44;
+      box-shadow: 0 0 20px #bbbbbb44;
+
+      max-height: 50vh;
+      max-width: 60%;
+
+      margin-right: 24px;
+      margin-bottom: 24px;
+    }
+
+    @media (max-width: 1200px) {
+
+      main img,
+      section img {
+        width: 100%;
+      }
+
+      .imgLeft,
+      .imgRight {
+        max-height: none;
+      }
+    }
+  </style>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="theme-color" content="#000000">
   <title>Jayden Wojcik</title>
@@ -200,6 +257,9 @@
           determination to make a meaningful impact, Jayden eagerly anticipates the chapters yet to unfold.
         </p>
       </section>
+      <p id="btt" style="text-align:center;"
+        onclick="document.getElementById('head').scrollIntoView({ behavior: 'smooth', block: 'end', inline: 'nearest' })">
+        Back to top.</p>
     </article>
     <aside>
       <ul id="sociallist">

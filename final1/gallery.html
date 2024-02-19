@@ -4,7 +4,88 @@
 <head>
   <meta charset="UTF-8">
   <link rel="stylesheet" href="common_style.css">
-  <link rel="stylesheet" href="galleryStyle.css">
+  <style>
+    /* https://codepen.io/theamazingben/pen/QRVeaj */
+
+    .photo-container {
+      padding-inline-start: 0;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      columns: 12rem;
+      column-gap: 1rem;
+    }
+
+    .photo-container li {
+      break-inside: avoid;
+      margin: 0 0 1rem;
+    }
+
+    .photo-container img {
+      display: block;
+      height: auto;
+      width: 100%;
+
+      border-radius: 24px;
+      border: 2px solid #bbbbbb44;
+      box-shadow: 0 0 20px #bbbbbb44;
+
+      backdrop-filter: blur(3px) brightness(110%) contrast(80%);
+
+      cursor: pointer;
+
+      transition: width 1s;
+      transition: height 1s;
+    }
+
+    .photoInsertImg {
+      max-width: 90vw;
+      width: auto;
+      max-height: 90vh;
+      height: auto;
+
+      box-shadow: 0 0 20px #bbbbbb44;
+    }
+
+    #photoInsert {
+
+      visibility: hidden;
+
+      display: flex;
+      flex-direction: column-reverse;
+      justify-content: center;
+      align-items: center;
+
+      backdrop-filter: blur(0px);
+      z-index: 10;
+
+      width: 0;
+      height: 0;
+
+      position: fixed;
+      top: 0;
+      left: 0;
+
+      transition: backdrop-filter 1s;
+    }
+
+    h2 {
+      text-align: center;
+    }
+
+    #photoInsert p {
+      color: white;
+      text-shadow: 0 0 10px #bbbbbb
+    }
+
+    #photoInsert.photoInsertBlurred {
+      visibility: visible;
+      width: 100vw;
+      height: 100vh;
+      backdrop-filter: blur(10px) brightness(50%);
+    }
+  </style>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="theme-color" content="#000000">
   <title>Jayden Wojcik</title>
@@ -57,6 +138,9 @@
         <li><img src="assets/gallery/toby11.jpeg" alt="Toby laying cutely on the ground"></li>
         <li></li>
       </ul>
+      <p id="btt" style="text-align:center;"
+        onclick="document.getElementById('head').scrollIntoView({ behavior: 'smooth', block: 'end', inline: 'nearest' })">
+        Back to top.</p>
     </article>
     <aside>
       <ul id="sociallist">
@@ -71,9 +155,11 @@
       </ul>
     </aside>
   </main>
-  <div id="photoInsert"><h2>Click anywhere to go back.</h2></div>
+  <div id="photoInsert">
+    <h2>Click anywhere to go back.</h2>
+  </div>
   <footer>© 2023 Jayden Wojcik. Icons provided by <a href="https://fontawesome.com/"
-    target="_blank">FontAwesome.com</a>.
+      target="_blank">FontAwesome.com</a>.
   </footer>
   <script src="gallery.js"></script>
 </body>

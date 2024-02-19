@@ -286,6 +286,20 @@ footer {
   animation: center 10s ease infinite;
 }
 
+#btt {
+  text-decoration: underline;
+
+}
+
+#btt:active {
+  text-decoration: dotted;
+  color: #ffffff99;
+}
+
+#btt:hover {
+  cursor: pointer;
+}
+
 @keyframes center {
   3% { transform: scale(1); }
   4% { transform: rotate(-2deg) scale(1.01); }
