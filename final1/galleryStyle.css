@@ -18,7 +18,7 @@
 .photo-container img {
   display: block;
   height: auto;
-  max-width: 100%;
+  width: 100%;
 
   border-radius: 24px;
   border: 2px solid #bbbbbb44;
@@ -42,6 +42,8 @@
 }
 
 #photoInsert {
+
+  visibility: hidden;
 
   display: flex;
   flex-direction: column-reverse;
@@ -71,6 +73,7 @@ h1 {
 }
 
 #photoInsert.photoInsertBlurred {
+  visibility: visible;
   width: 100vw;
   height: 100vh;
   backdrop-filter: blur(10px) brightness(50%);
