@@ -25,4 +25,53 @@
   box-shadow: 0 0 20px #bbbbbb44;
 
   backdrop-filter: blur(3px) brightness(110%) contrast(80%);
+
+  cursor: pointer;
+
+  transition: width 1s;
+  transition: height 1s;
+}
+
+.photoInsertImg {
+  max-width: 90vw;
+  width: auto;
+  max-height: 90vh;
+  height: auto;
+
+  box-shadow: 0 0 20px #bbbbbb44;
+}
+
+#photoInsert {
+
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+
+  backdrop-filter: blur(0px);
+  z-index: 10;
+
+  width: 0;
+  height: 0;
+
+  position: fixed;
+  top:0;
+  left:0;
+
+  transition: backdrop-filter 1s;
+}
+
+h1 {
+  text-align: center;
+}
+
+#photoInsert p {
+  color: white;
+  text-shadow: 0 0 10px #bbbbbb 
+}
+
+#photoInsert.photoInsertBlurred {
+  width: 100vw;
+  height: 100vh;
+  backdrop-filter: blur(10px) brightness(50%);
 }

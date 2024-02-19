@@ -277,14 +277,14 @@ footer {
 
 #bento1 {
   grid-area: one;
-  animation: rightIn 0.5s ease-out 0.75s forwards;
+  animation: rightIn 0.5s ease-out 0.5s forwards;
 }
 
 #bento2 {
   grid-area: two;
 
   transform: scale(1);
-  animation: center 10s ease 0.5s infinite;
+  animation: center 10s ease infinite;
 }
 
 @keyframes center {
@@ -312,7 +312,7 @@ footer {
 #bento3 {
   grid-area: three;
 
-  animation: rightIn 0.5s ease-out 1.5s forwards;
+  animation: rightIn 0.5s ease-out 2.5s forwards;
 }
 
 #bento3 .bentoBack {
@@ -324,7 +324,7 @@ footer {
 #bento4 {
   grid-area: four;
 
-  animation: rightIn 0.5s ease-out 1.75s forwards;
+  animation: rightIn 0.5s ease-out 2s forwards;
 }
 
 #bento4 .bentoBack {
@@ -336,7 +336,7 @@ footer {
 #bento5 {
   grid-area: five;
 
-  animation: rightIn 0.5s ease-out 1.25s forwards;
+  animation: rightIn 0.5s ease-out 1.5s forwards;
 }
 
 #bento5 .bentoBack {
@@ -354,11 +354,7 @@ footer {
 #bento7 {
   grid-area: seven;
 
-  animation: rightIn 0.5s ease-out 2s forwards;
-}
-
-#bento8 {
-  grid-area: eight;
+  animation: rightIn 0.5s ease-out 3s forwards;
 }
 
 .about-landing {
