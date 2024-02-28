@@ -14,14 +14,28 @@
         <form id="characterForm" type="get" action="page3.html">
             <fieldset>
                 <legend>Choose Your Character</legend>
-                <input type="radio" id="aria" name="char" value="A">
-                <label for="aria">Aria, the Warrior</label>
-                <br>
-                <input type="radio" id="eldrin" name="char" value="E">
-                <label for="eldrin">Eldrin, the Mage</label>
-                <br>
-                <input type="radio" id="tara" name="char" value="T">
-                <label for="tara">Tara, the Rogue</label>
+                <div class="character">
+                    <input type="radio" id="aria" name="char" value="A">
+                    <label for="aria">
+                        <strong>Aria, the Warrior:</strong>
+                        Strong and brave, with the ability to overcome
+                        physical obstacles.
+                    </label>
+                </div>
+                <div class="character">
+                    <input type="radio" id="eldrin" name="char" value="E">
+                    <label for="eldrin">
+                        <strong>Eldrin, the Mage:</strong>
+                        Wise and knowledgeable, with the power to solve puzzles and cast spells.
+                    </label>
+                </div>
+                <div class="character">
+                    <input type="radio" id="tara" name="char" value="T">
+                    <label for="tara">
+                        <strong>Tara, the Rogue:</strong>
+                        Quick and cunning, with skills in stealth and persuasion.
+                    </label>
+                </div>
             </fieldset>
             <input type="submit">
         </form>

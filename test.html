@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greeter</title>
+</head>
+<body>
+    <h2>Click a Meme!</h2>
+    <img src="https://static.boredpanda.com/blog/wp-content/uploads/2014/02/funny-wet-cats-coverimage.jpg" alt="Funny Cat" id="meme1" class="meme-image" style="width: 200px; margin: 10px;">
+    <img src="https://media-cldnry.s-nbcnews.com/image/upload/t_fit-760w,f_auto,q_auto:best/rockcms/2022-01/210602-doge-meme-nft-mb-1715-8afb7e.jpg" alt="Doge" id="meme2" class="meme-image" style="width: 200px; margin: 10px;">
+    <img src="https://i.pinimg.com/550x/29/c2/dc/29c2dc904d909b71816dcc5d21284083.jpg" alt="Fine Art Memes" id="meme3" class="meme-image" style="width: 200px; margin: 10px;">
+    
+    <script>
+        "use strict";
+        document.querySelectorAll(".meme-image").forEach((img) => {
+            img.addEventListener("click", function(event) {
+                alert(event.target.alt);
+            })
+        });
+    </script>
+</body>
+</html>

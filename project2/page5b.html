@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Journey Continues</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <section class="container">
+    <h1>The Path of Stealth</h1>
+    <p>To successfully navigate the Path of Stealth, you must choose your actions carefully. Select the correct sequence
+      of actions to avoid detection and reach your objective.</p>
+    <!-- Actions -->
+    <div class="stealth-option" id="hide">Hide in the shadows</div>
+    <div class="stealth-option" id="run">Run quickly to the next cover</div>
+    <div class="stealth-option" id="distract">Create a distraction</div>
+    <div class="stealth-option" id="wait">Wait for the right moment</div>
+    <!-- Buttons -->
+    <button onclick="checkSequence()" id="checkSequence">Check Sequence</button>
+    <button onclick="reset()" id="reset">Reset!</button>
+    <script>
+      const correctSequence = ['hide', 'wait', 'distract'];
+      let currSequence = [];
+
+      const btns = document.getElementsByClassName("stealth-option");
+      
+      for (let btn of btns) {
+        btn.addEventListener("click", function() {
+          btn.style["background-color"] = "green";
+          currSequence.push(btn.id);
+        })
+      }
+
+      document.getElementById("checkSequence").addEventListener("click",checkSequence);
+      function checkSequence() {
+        if (currSequence.toString() == correctSequence.toString()) {
+          alert("Congratulations!")
+          window.location.href = "page6.html"
+        } else {
+          currSequence = [];
+        }
+      }
+
+      document.getElementById("reset").addEventListener("click",reset);
+      function reset() {
+        for (let btn of btns) {
+          btn.style["background-color"] = "gray";
+        }
+        currSequence = [];
+      }
+    </script>
+  </section>
+</body>
+
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Final Showdown</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <section class="container">
+    <h1>The Final Showdown</h1>
+    <p>After a long journey filled with trials and challenges, you finally stand before Malakar's lair. The dark
+      sorcerer awaits, the Crystal of Wisdom in his grasp. It's time to make your move.</p>
+
+    <form type="get" action="page7.html">
+      <fieldset>
+        <legend>How will you confront Malakar?</legend>
+        <label for="pathChoice">Choose wiseley:</label>
+        <select id="pathChoice" name="pathChoice">
+          <option>--Please choose an option--</option>
+          <option value="punch">Punch</option>
+          <option value="kick">Kick</option>
+          <option value="special">Special Ability</option>
+        </select>
+      </fieldset>
+      <fieldset>
+        <legend>Character Information</legend>
+        <fieldset>
+          <legend>The Brave</legend>
+          <label for="name">Your Name:</label>
+          <input type="text" id="name" name="name">
+        </fieldset>
+        <fieldset>
+          <legend>Select Your Weapon:</legend>
+          <input type="radio" id="sword" name="char" value="sword">
+          <label for="sword">Sword</label>
+          <input type="radio" id="bow" name="char" value="bow">
+          <label for="bow">Bow</label>
+          <input type="radio" id="staff" name="char" value="staff">
+          <label for="staff">Staff</label>
+        </fieldset>
+        <fieldset>
+          <legend>Select Your Weapon:</legend>
+          <input type="checkbox" id="plate" name="plate" value="plate">
+          <label for="plate">Plate Armor</label>
+          <input type="checkbox" id="leather" name="leather" value="leather">
+          <label for="leather">Leather Armor</label>
+          <input type="checkbox" id="cloak" name="cloak" value="cloak">
+          <label for="cloak">Cloak</label>
+        </fieldset>
+        <label for="message">Leave a Message for Malakar:<br></label>
+        <textarea rows="4" cols="50" id="message" name="message"></textarea>
+      </fieldset>
+      <input type="submit" value="Face Malakar">
+    </form>
+
+    <p>Your choice here will determine the fate of the kingdom. Choose wisely.</p>
+    <!-- 
+      I would like to thank Jaycee Wojcik, my sister, 
+      for letting me do this at her house at 10pm the night 
+      it is due. 
+    -->
+  </section>
+</body>
+
+</html>

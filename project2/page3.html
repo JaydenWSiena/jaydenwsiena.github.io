@@ -10,18 +10,48 @@
 
 <body>
   <section class="container">
-    <h1>The Quest Begins</h1>
+    <h1>Pack Your Bag</h1>
+    <p>Select the supplies you wish to take on your quest. Choose wisely, as you can only carry a limited amount.</p>
     <form type="get" action="page4.html">
-      <input type="checkbox" id="food" name="food" value="F">
-      <label for="food">Food: Essential for energy.</label><br>
-      <input type="checkbox" id="water" name="water" value="W">
-      <label for="water">Water: Hydration is key!</label><br>
-      <input type="checkbox" id="potions" name="potions" value="P">
-      <label for="potions">Magic Potions: For health and magical energy.</label><br>
-      <input type="checkbox" id="maps" name="maps" value="M">
-      <label for="maps">Maps: Don't get lost in the wilderness!</label><br>
-      <input type="checkbox" id="sword" name="sword" value="S">
-      <label for="sword">Sword: Fend off those pesky foes!</label>
+      <div class="supplies">
+        <input type="checkbox" id="food" name="food" value="F">
+        <label for="food">
+          <strong>Food:</strong>
+          Essential for energy.
+        </label>
+      </div>
+      <div class="supplies">
+        <input type="checkbox" id="water" name="water" value="W">
+        <label for="water">
+          <strong>Water:</strong>
+          Hydration is key!
+        </label>
+      </div>
+      <div class="supplies">
+        <input type="checkbox" id="potions" name="potions" value="P">
+        <label for="potions">
+          <strong>Magic Potions:</strong>
+          For health and magical energy.
+        </label>
+      </div>
+      <div class="supplies">
+        <input type="checkbox" id="maps" name="maps" value="M">
+        <label for="maps">
+          <strong>Maps:</strong>
+          Don't get lost in the wilderness!
+        </label>
+      </div>
+      <div class="supplies">
+        <input type="checkbox" id="sword" name="sword" value="S">
+        <label for="sword">
+          <strong>Sword:</strong>
+          Fend off those pesky foes!
+        </label>
+      </div>
+      <p>Think carefully - what would you need on your journey?</p>
+      <p>Once you've chosen you gear, hit the 'Continue' button.</p>
+      <p>But beware, every choice has consequences!</p>
+      <input type="submit" value="Continue">
     </form>
   </section>
 </body>
