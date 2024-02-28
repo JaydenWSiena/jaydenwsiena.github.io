@@ -17,7 +17,7 @@
     
     <form type="get" action="page6.html">
       <label for="pathChoice">Choose your path:</label>
-      <select id="pathChoice" name="pathChoice">
+      <select id="pathChoice" name="pathChoice" required>
         <option>--Please choose an option--</option>
         <option value="creativityPath">The Path of Creativity</option>
         <option value="lovePath">The Path of Love</option>
@@ -29,6 +29,23 @@
 
     <p>Your choice will not only test your abilities but also reveal deeper truths about your character.</p>
   </section>
+  <script defer>
+    let pc = document.getElementById("pathChoice")
+    pc.addEventListener("change", function() {
+      if (pc.value == "creativityPath") {
+        document.querySelector("body").style["background-color"] = "#eeffff";
+        document.querySelector("form").action = "page6.html";
+
+      } else if (pc.value == "lovePath") {
+        document.querySelector("body").style["background-color"] = "#ffeeff";
+        document.querySelector("form").action = "page6.html";
+
+      } else if (pc.value == "stealthPath") {
+        document.querySelector("body").style["background-color"] = "#ffffee";
+        document.querySelector("form").action = "page5b.html";
+      }
+    })
+  </script>
 </body>
 
 </html>
