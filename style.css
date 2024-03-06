@@ -1,7 +1,7 @@
 body { 
     overflow: scroll-y;
     margin: 0 0;
-    background-image: linear-gradient(135deg, #2222BB,#9200db);
+    background-image: linear-gradient(135deg, #4b47be,#6d3e84);
     background-size: 150% 150%;
     animation: backgroundTween 3s ease-in-out infinite;
     
